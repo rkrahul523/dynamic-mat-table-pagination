@@ -1,0 +1,12 @@
+Table pagination example 
+{{(data$ | async)?.length}}
+<table-basic-example 
+[totalRecords]="totalRecords"
+[data]="data$ | async"
+(getNewRecords)= "getNextPage($event)"
+(getFirstOrLastPage)= "getFirstOrLastPage($event)"
+(getPrevNextAfterLastPage)= "getPrevNextAfterLastPage($event)"
+
+
+
+></table-basic-example>
